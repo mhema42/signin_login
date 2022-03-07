@@ -1,0 +1,105 @@
+body {
+    background-color: brown;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(117, 20, 20);
+}
+
+img {
+    display: flex;
+    float: left;
+    padding: 15px 0px 0px 25px;
+    width: 90px; 
+}
+
+.menu-btn {
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-login {
+    position: absolute;
+    right: 100px;
+    top: -20px;
+    font-size: 12px;
+}
+
+header .main-menu {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: space-between;
+    margin: 0 20vw 0 20vw;
+    padding: 0;
+}
+
+header .main-menu li, .menu-login {
+    list-style-type: none; 
+}
+
+li {
+    padding-top: 35px;
+}
+  
+
+
+.menu-btn:hover {
+    color: gray;
+}
+
+.mhead {
+    background-color: rgb(117, 20, 20); 
+}
+
+.mhead img {
+    width: 70px; 
+}
+
+h1 {
+    font-size: 26px;
+    padding: 20px;
+}
+
+.login, .signup {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 35%;
+}
+
+.signup {
+    width: 55%;
+}
+
+.signup-modal, .login-modal {
+    background-color: rgb(196, 74, 74);
+    box-shadow: 0px 0px 5px black;
+    bottom: 0;
+    color: #fff;
+    height: 70vh;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 55vw;
+    z-index: 3;
+}
+
+span {
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+  }
