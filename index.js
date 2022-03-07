@@ -26,3 +26,10 @@ password.addEventListener('input', function()
         text.innerHTML = "";
     }
 });
+
+document.getElementById("menu-login").addEventListener("click", show);
+
+function show() {
+    document.getElementById("login-modal").classList.toggle("show");
+    document.getElementById("layer").classList.toggle("show");
+}

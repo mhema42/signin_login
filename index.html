@@ -22,24 +22,22 @@
                 <li><a class="menu-btn" id="search">Sök</a></li>
             </ul>
             <ul class="menu-login">
-                <li><a class="menu-btn" id="search">Logga in</a></li>
+                <li><a class="menu-btn" id="menu-login">Logga in</a></li>
             </ul>
         </nav>
     </header>
 
-    <modal class="login-modal show">
+    <layer class="layer hidden" id="layer"></layer>
 
+    <modal class="login-modal hidden" id="login-modal">
         <mhead class="mhead">
             <img src="img/logo.png">
         </mhead>
-
         <div class="login">
             <h1>Logga in hos Ytterhogdal@bio.se</h1>
-
             <div class="mb-3">
                 <span>(har du inget konto så kan du registrera ett <a href="signup.html">här</a>)</span>
             </div>
-
             <form>          
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Ange ditt användarnamn" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -57,11 +55,9 @@
     </modal>
 
     <modal class="signup-modal hidden">
-
         <mhead class="mhead">
             <img src="img/logo.png">
         </mhead>
-
         <div class="signup">
             <h1>Registrera ett konto hos Ytterhogdal@bio.se</h1>
             <form>
