@@ -45,10 +45,9 @@ header .main-menu li, .menu-login {
 li {
     padding-top: 35px;
 }
-  
-
 
 .menu-btn:hover {
+    cursor: pointer;
     color: gray;
 }
 
@@ -69,7 +68,7 @@ h1 {
     margin: auto;
     margin-top: 20px;
     text-align: center;
-    width: 35%;
+    width: 42%;
 }
 
 .layer {
@@ -87,7 +86,7 @@ h1 {
 }
 
 .signup {
-    width: 55%;
+    width: 50%;
 }
 
 .signup-modal, .login-modal {
@@ -116,4 +115,49 @@ span {
 .show {
     display: flex;
     flex-direction: column;
-  }
+}
+
+.close-btn {
+font-family: 'Varela Round', sans-serif;
+font-size: 35px;
+font-weight: bold;
+position: absolute;
+right: 20px;
+top: 5px;
+}
+
+.close-btn:hover {
+cursor: pointer;
+opacity: 40%;
+animation-name: spin;
+animation-duration: 600ms;
+animation-fill-mode: forwards;
+}
+
+.close-btn:not(:hover) {
+    cursor: pointer;
+    animation-name: spin1;
+    animation-duration: 600ms;
+    }
+
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(-90deg); 
+    }
+}
+
+@keyframes spin1 { 
+    from { 
+        transform: rotate(-90deg); 
+    } to { 
+        transform: rotate(0deg); 
+    }
+}
+
+.open-signup {
+    cursor: pointer;
+    color: rgb(68, 78, 230);
+    font-weight: bold;
+}

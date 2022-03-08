@@ -1,12 +1,12 @@
 var strength = {
-0: "Worst ☹",
-1: "Bad ☹",
-2: "Weak ☹",
-3: "Good ☺",
-4: "Strong ☻"
+0: "För svagt lösenord",
+1: "För svagt lösenord",
+2: "För svagt lösenord",
+3: "Ok lösenord",
+4: "Starkt lösenord"
 }
 
-var password = document.getElementById('password');
+var password = document.getElementById('signup_pwd');
 var meter = document.getElementById('password-strength-meter');
 var text = document.getElementById('password-strength-text');
 
@@ -20,16 +20,32 @@ password.addEventListener('input', function()
    
     // Update the text indicator
     if(val !== "") {
-        text.innerHTML = "Strength: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" + result.feedback.warning + " " + result.feedback.suggestions + "</span"; 
+        text.innerHTML = "<strong>" + strength[result.score]; 
     }
     else {
         text.innerHTML = "";
     }
 });
 
-document.getElementById("menu-login").addEventListener("click", show);
+document.getElementById("menu-login").addEventListener("click", open_login);
+document.getElementById("open-login").addEventListener("click", open_login);
+document.getElementById("open-signup").addEventListener("click", open_signup);
+document.getElementById("close-login-btn").addEventListener("click", close_modal);
+document.getElementById("close-signup-btn").addEventListener("click", close_modal);
 
-function show() {
+function open_login() {
+    document.getElementById("signup-modal").classList.remove("show");
     document.getElementById("login-modal").classList.toggle("show");
     document.getElementById("layer").classList.toggle("show");
+}
+
+function open_signup() {
+    document.getElementById("login-modal").classList.toggle("show");
+    document.getElementById("signup-modal").classList.toggle("show");
+}
+
+function close_modal() {
+    document.getElementById("login-modal").classList.remove("show");
+    document.getElementById("signup-modal").classList.remove("show");
+    document.getElementById("layer").classList.remove("show");
 }
